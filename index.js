@@ -1,16 +1,26 @@
-const yesBtn = document.querySelector('#yesBtn');
+const $btnYes=document.querySelector("#btnYes"),
+      $btnNo=document.querySelector("#btnNo");
 
-yesBtn.addEventListener('click',function () {
-    alert('SABIA QUE DIRIAS SI')
-    alert('ME HACES LA PERSONA MAS FELIZ na no te creas O SI?')
-});
+$btnNo.addEventListener("mouseover",()=>{
+    let x=window.innerWidth,
+        y=window.innerHeight;
+        console.log(x)
+    let newX=Math.floor(Math.random()*x)+1,
+        newY=Math.random()*y;
+  
+    $btnNo.style.position="absolute";
+    $btnNo.style.left=newX+"px";
+    $btnNo.style.top=newY+"px"
 
-const noBtn = document.querySelector('#noBtn');
+})
 
-noBtn.addEventListener('mouseover', function () {
-    const randomX = parseInt(Math.random()*100);
-    const randomY = parseInt(Math.random()*100);
-    noBtn.style.setProperty('top',randomY+'%');
-    noBtn.style.setProperty('left',randomX+'%');
-    noBtn.style.setProperty('transform',`translate(-${randomX}%,-${randomY}%)`);
+
+$btnYes.addEventListener("click",()=>{
+    let $div=document.createElement("div"),
+        $fragment=document.createDocumentFragment();
+    $div.innerHTML="<h1>sabia que me dirias que si, NADIE SE RESISTE :)</h1>";
+    $div.style.backgroundColor="chocolate";
+    $fragment.appendChild($div);
+    
+    document.querySelector(".container").appendChild($fragment);
 })
