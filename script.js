@@ -1,31 +1,31 @@
 function cambiaMensaje() {
 
-document.getElementById("loading message").innerText = "Enviado!"
+  document.getElementById("loading message").innerText = "Enviado!";
 
 
 }
-setTimeout(cambiaMensaje,3000)
+setTimeout(cambiaMensaje, 3000);
 
-    setTimeout(function (){
-      const params= decodeURI(location.search).replace ("?","")
+setTimeout(function () {
+  const params = decodeURI(location.search).replace("?", "");
 
-    let content= params.split("&")[0].replace("content=","")
-  content= decodeURI(content)
-
-
-    alert(content)
+  let content = params.split("&")[0].replace("Content=", "");
+  content = decodeURI(content);
 
 
-},4000)
+  alert(content);
 
-function loadAudio(){
 
-    var audio = new Audio("./musica.mp3");
-    audio.play();
-    
+}, 4000);
+
+function loadAudio() {
+
+  var audio = new Audio("./musica.mp3");
+  audio.play();
+
 
 }
 
-const encendido= document.querySelector(".encendido")
-encendido.onclick=() => loadAudio()
+const encendido = document.querySelector(".encendido");
+encendido.onclick = () => loadAudio()
 
