@@ -22,8 +22,7 @@ function copyTexto()
 {
 const host=location.origin;
 const fileName="segundacapa.html" 
-let response=`${host}/-olas/${fileName}?title=${inputTitle.value}&content=${inputComentario.value}&De=${inputDe.value}&para=${inputpara.value} `
-response = encodeURI(response);
+const response= `${host}/-olas/${fileName}?title=${encondeURI(inputTitle.value)}&content=${encodeURI(inputComentario.value)}&De=${encodeURI(inputDe.value)}&para=${encodeURI(inputpara.value)} `
 
 
 var win = window.open();
