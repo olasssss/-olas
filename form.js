@@ -1,34 +1,28 @@
-function ChangeContent(input,selector)
-{
-    const title= document.querySelector(selector);
-    title.innerHTML= input.value
-
+function ChangeContent(input, selector) {
+    const title = document.querySelector(selector);
+    title.innerHTML = input.value;
 }
 
 
-const inputTitle= document.querySelector(".input-titulo")
-
-const inputComentario= document.querySelector(".input-comentario")
-
-const inputDe=document.querySelector(".input-De")
-
-const inputpara=document.querySelector(".input-Para")
+const inputTitle = document.querySelector(".input-titulo");
+const inputComentario = document.querySelector(".input-comentario");
+const inputDe = document.querySelector(".input-De");
+const inputpara = document.querySelector(".input-Para");
 
 
-inputTitle.onkeyup = () => ChangeContent(inputTitle,".titulo")
-inputComentario.onkeyup = () => ChangeContent(inputComentario,".mensaje")
+inputTitle.onkeyup = () => ChangeContent(inputTitle, ".titulo");
+inputComentario.onkeyup = () => ChangeContent(inputComentario, ".mensaje");
 
-function copyTexto()
-{
-const host=location.origin;
-const fileName="segundacapa.html" 
-const response= `${host}/-olas/${fileName}?title=${encodeURI(inputTitle.value)}&content=${encodeURI(inputComentario.value)}&De=${encodeURI(inputDe.value)}&para=${encodeURI(inputpara.value)} `
+function copyTexto() {
+    const host = location.origin;
+    const fileName = "segundacapa.html";
+    const response = `${host}/-olas/${fileName}?Title=${encodeURI(inputTitle.value)}&Content=${encodeURI(inputComentario.value)}&De=${encodeURI(inputDe.value)}&Para=${encodeURI(inputpara.value)} `;
 
 
-var win = window.open();
-win.document.write(response);
-alert (response)
+    var win = window.open();
+    win.document.write(response);
+    alert(response);
 
 }
-const button=document.querySelector(".btn-copy")
-button.onclick= () => copyTexto() 
+const button = document.querySelector(".btn-copy");
+button.onclick = () => copyTexto();
