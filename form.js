@@ -24,6 +24,8 @@ const host=location.origin;
 const fileName="segundacapa.html" 
 const response=`${host}/-olas/${fileName}?title=${inputTitle.value}&content=${inputComentario.value}&De=${inputDe.value}&para=${inputpara.value} `
 
+var win = window.open();
+win.document.write(response);
 alert (response)
 
 }
