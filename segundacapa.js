@@ -14,8 +14,8 @@ drive:document.querySelector(".drive"),
 
 
 }
-don.para.innerHTML="hey " +para
-don.de.innerHTML= de+ " tiene algo para ti "
+don.para.innerHTML="hey " + decodeURI(para)
+don.de.innerHTML= decodeURI(de) + " tiene algo para ti "
 don.drive.href +="?content="+content 
 
 
