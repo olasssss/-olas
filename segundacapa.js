@@ -1,5 +1,5 @@
 function loadInfo() {
-    const params= location.search.replace ("?","")
+    const params= decodeURI(location.search).replace("?","")
     const title= params.split("&")[0].replace("title=","")
     const content= params.split("&")[1].replace("content=","")
     const de= params.split("&")[2].replace("De=","")
