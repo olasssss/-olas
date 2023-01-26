@@ -7,7 +7,7 @@ document.getElementById("loading message").innerText = "Enviado!"
 setTimeout(cambiaMensaje,3000)
 
     setTimeout(function (){
-      const params= location.search.replace ("?","")
+      const params= decodeURI(location.search).replace ("?","")
 
     let content= params.split("&")[0].replace("content=","")
   content= decodeURI(content)
